@@ -10,6 +10,7 @@
     height: 100vh;
     width: 300px;
     background-color: #253141;
+
     &__user-name {
       height: 100px;
       display: flex;
@@ -24,6 +25,7 @@
 
         &__name {
           color: #ffffff;
+          font-weight: bold;
         }
 
         &__icons {
@@ -39,6 +41,27 @@
     &__group-list {
       height: calc(100vh - 100px);
       background-color: #2f3e51;
+
+      .group {
+        height: 91px;
+        width: 260px;
+        color: #ffffff;
+
+        &-box {
+          height: 31px;
+          width: 260px;
+          padding: 20px 20px 40px;
+
+          &__name {
+            font-size: 15px;
+          }
+
+          &__new-message {
+            font-size: 11px;
+            margin-top: 5px;
+          }
+        }
+      }
     }
   }
 
