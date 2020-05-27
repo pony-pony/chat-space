@@ -12,6 +12,28 @@
     background-color: #253141;
     &__user-name {
       height: 100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .top-items {
+        height: 20px;
+        width: 260px;
+        display: flex;
+        justify-content: space-between;
+
+        &__name {
+          color: #ffffff;
+        }
+
+        &__icons {
+          .btn-icon {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 5px;
+          }      
+        }
+      }
     }
 
     &__group-list {
