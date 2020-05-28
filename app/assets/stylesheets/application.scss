@@ -70,9 +70,10 @@
   .chat-main {
     height: 100vh;
     width: calc(100% - 300px);
-    background-color: #ffffff;
+    background-color: #fafafa;
 
     &__group-info {
+      background-color: #ffffff;
       height: 100px;
       border-bottom: 1px solid #eee;
       display: flex;
@@ -111,6 +112,29 @@
     &__message-list {
       height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
+
+      .chat-box {
+        margin: 35px 40px 46px;
+        
+        .chat-info {
+          display: flex;
+          &__name {
+            font-size: 16px;
+            color: #333333;
+            font-weight: bold;
+            margin-right: 5px;
+          }
+          &__date {
+            color: #999999;
+            font-size: 12px;
+          }
+        }
+        .chat-message {
+          font-size: 14px;
+          color: #434a54;
+          margin-top: 12px;
+        }
+      }
     }
 
     &__message-form {
