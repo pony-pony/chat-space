@@ -17,3 +17,13 @@
       .chat-message
         hello, everyone
   .chat-main__message-form
+    .form-box
+      .form-input
+        %input{type: "text", class: "input-box", placeholder: "type a message"}
+        .image-btn
+          %label{class: "input-box__image"}
+            = icon('fas', 'image')
+            %input{type: "file"}
+    .form-submit 
+      %input{type: "submit", value: "Send", class: "submit-btn"}
+    
