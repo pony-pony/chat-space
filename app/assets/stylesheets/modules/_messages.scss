@@ -127,13 +127,16 @@ $white: #ffffff;
         margin: 28px 40px auto;
       }
     }
+    .hidden-box {
+      height: 35px;
+    }
 
     &__message-list {
-      height: calc(100vh - 100px - 90px);
+      height: calc(100vh - 100px - 90px - 35px);
       background-color: #fafafa;
 
       .chat-box {
-        margin: 35px 40px 46px;
+        margin:0 40px 46px;
         
         .chat-info {
           display: flex;
