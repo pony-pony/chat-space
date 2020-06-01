@@ -101,6 +101,13 @@ $white: #ffffff;
           color: #999999;
           font-size: 12px;
           margin-top: 15px;
+          display: flex;
+
+          .members-box {
+            display: flex;
+            list-style: none;
+            margin-left: 5px;
+          }
         }
       }
 
@@ -120,13 +127,16 @@ $white: #ffffff;
         margin: 28px 40px auto;
       }
     }
+    .hidden-box {
+      height: 35px;
+    }
 
     &__message-list {
       height: calc(100vh - 100px - 90px - 35px);
       background-color: #fafafa;
 
       .chat-box {
-        margin: 35px 40px 46px;
+        margin:0 40px 46px;
         
         .chat-info {
           display: flex;
@@ -141,10 +151,13 @@ $white: #ffffff;
             font-size: 12px;
           }
         }
-        .chat-message {
-          font-size: 14px;
-          color: #434a54;
-          margin-top: 12px;
+        .Message {
+          
+          .chat-message {
+            font-size: 14px;
+            color: #434a54;
+            margin-top: 12px;
+          }
         }
       }
     }
@@ -154,27 +167,30 @@ $white: #ffffff;
       background-color: #d2d2d2;
       display: flex;
       align-items: center;
-
-      .form-box {
+      .Form {
         display: flex;
         width: 100%;
-        .form-input {
-          display: flex;
-          position: relative;
+
+        .form-box {
           width: 100%;
-          .input-box {
-            height: 50px;
-            border: none;
+          .form-input {
+            display: flex;
+            position: relative;
             width: 100%;
-            margin-left: 40px;
-            padding-left: 10px;
-          }
-          .image-btn {
-            position: absolute;
-            top: 15px;
-            right: 10px;
-            input {
-              display: none;
+            .input-box {
+              height: 50px;
+              border: none;
+              width: 100%;
+              margin-left: 40px;
+              padding-left: 10px;
+            }
+            .image-btn {
+              position: absolute;
+              top: 15px;
+              right: 10px;
+              .hidden {
+                display: none;
+              }
             }
           }
         }
