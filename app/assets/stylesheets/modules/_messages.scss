@@ -134,6 +134,7 @@ $white: #ffffff;
     &__message-list {
       height: calc(100vh - 100px - 90px - 35px);
       background-color: #fafafa;
+      overflow: scroll;
 
       .chat-box {
         margin:0 40px 46px;
