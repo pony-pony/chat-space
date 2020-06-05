@@ -53,6 +53,7 @@ $white: #ffffff;
         height: 91px;
         width: 260px;
         color: $white;
+        overflow-x: scroll;
 
         &-box {
           height: 31px;
@@ -127,14 +128,12 @@ $white: #ffffff;
         margin: 28px 40px auto;
       }
     }
-    .hidden-box {
-      height: 35px;
-    }
 
     &__message-list {
-      height: calc(100vh - 100px - 90px - 35px);
+      height: calc(100vh - 100px - 90px);
       background-color: #fafafa;
       overflow: scroll;
+      padding-top: 46px;
 
       .chat-box {
         margin:0 40px 46px;
