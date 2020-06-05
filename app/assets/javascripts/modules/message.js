@@ -1,25 +1,10 @@
 $(function(){
+  // let last_message_id = $('.chat-box:last').data("message-id");
+  // console.log(last_message_id)
   function buildHTML(message){
     if( message.image ) {
-      let html =
-        `<div class="chat-info">
-          <div class="chat-info__name">
-            ${message.user_name}
-          </div>
-          <div class="chat-info__date">
-            ${message.created_at}
-          </div>
-        </div>
-        <div class="Message">
-          <div class="chat-message">
-            ${message.content}
-          </div>
-          <img class="Message__image" src="${message.image}">
-        </div>`
-      return html;
-    } else {
-      let html =
-        `<div class="chat-box">
+      let html = `
+        <div class="chat-box" data-message-id=${message.id}>
           <div class="chat-info">
             <div class="chat-info__name">
               ${message.user_name}
@@ -28,11 +13,33 @@ $(function(){
               ${message.created_at}
             </div>
           </div>
-        <div class="Message">
-          <div class="chat-message">
-            ${message.content}
+          <div class="Message">
+            <div class="chat-message">
+              ${message.content}
+            </div>
+            <img class="Message__image" src="${message.image}">
           </div>
-        </div>`
+        </div>
+      `
+      return html;
+    } else {
+      let html = `
+        <div class="chat-box" data-message-id=${message.id}>
+          <div class="chat-info">
+            <div class="chat-info__name">
+              ${message.user_name}
+            </div>
+            <div class="chat-info__date">
+              ${message.created_at}
+            </div>
+          </div>
+          <div class="Message">
+            <div class="chat-message">
+              ${message.content}
+            </div>
+          </div>
+        </div>
+      `
       return html;
     };
   }
@@ -56,7 +63,8 @@ $(function(){
       $('form')[0].reset();
     })
     .fail(function(){
-      alert("メッセージ送信に失敗しました")
+      alert("メッセージ送信に失敗しました");
+      $(".submit-btn").prop("disabled", false);
     });
-  })
-})
+  });
+});
